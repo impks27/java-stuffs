@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/Emp"
+	xmlns:tns="http://www.example.org/Emp" elementFormDefault="qualified">
+	<element name="emp">
+		<complexType>
+			<sequence>
+				<element name="empId" type="int" />
+				<element name="name" type="tns:Name"/>
+				<element name="address" type="tns:Address" />
+				<element name="salary" type="double" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<complexType name="Name">
+		<sequence>
+			<element name="firstName" type="string" />
+			<element name="lastName" type="string" />
+		</sequence>
+	</complexType>
+
+	<complexType name="Address">
+		<sequence>
+			<element name="doorNo" type="string" />
+			<element name="city" type="string" />
+			<element name="pin" type="long" />
+		</sequence>
+	</complexType>
+</schema>

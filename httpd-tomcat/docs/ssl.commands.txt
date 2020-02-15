@@ -1,0 +1,14 @@
+Server:
+keytool -genkey -v -alias tomcat -keyalg RSA -validity 365 -keystore d:/ssl/server/tomcat.keystore -dname "CN=localhost, OU=Training, O=RAS IT, L=HYD, ST=AP, C=IN" -storepass 12345678 -keypass 12345678
+
+Client:
+keytool -genkey -v -alias shankey -keyalg RSA -storetype PKCS12 -keystore shanclient.p12 -dname "CN=Shantanu Banerjee, OU=Training, O=RAS IT, L=HYD, ST=AP, C=CH" -storepass 12345678 -keypass 12345678
+
+export cert from client and import it to server trust store:
+keytool -export -alias shankey -keystore shanclient.p12 -storetype PKCS12 -storepass 12345678 -rfc -file shan.cer
+
+keytool -import -v -file shan.cer -keystore tomcat.keystore -storepass 12345678
+
+export server cert and install it on the client machine as trust
+
+keytool -importkeystore -srckeystore tomcat.keystore -destkeystore tomcat.p12 -srcstoretype JKS -deststoretype PKCS12 -srcstorepass 12345678 -deststorepass 12345678 -srcalias tomcat -destalias tomcat -srckeypass 12345678 -destkeypass 12345678 -noprompt

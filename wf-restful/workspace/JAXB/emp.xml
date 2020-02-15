@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<emp xmlns="http://www.example.org/Emp">
+    <empId>1007</empId>
+    <name>
+        <firstName>Ravi</firstName>
+        <lastName>Kiran</lastName>
+    </name>
+    <address>
+        <doorNo>1-10-122</doorNo>
+        <city>Hyderabad</city>
+        <pin>50016</pin>
+    </address>
+    <salary>90000.0</salary>
+</emp>

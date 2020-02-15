@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<endpoints xmlns='http://java.sun.com/xml/ns/jax-ws/ri/runtime' version='2.0'>
+    <endpoint
+        name='empservice'
+        implementation='com.demo.ws.EmpServiceImpl'
+        url-pattern='/emps'/>
+        
+    <endpoint
+        name='calservice'
+        implementation='com.demo.ws.Calculator'
+        url-pattern='/cal'/>
+</endpoints>

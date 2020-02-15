@@ -1,0 +1,73 @@
+dn: dc=example,dc=com
+objectClass: domain
+objectClass: top
+dc: example
+entryUUID: 54c89c45-327b-3d38-8a2e-b7814de651a4
+
+dn: ou=People,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: People
+entryUUID: 9cad04a8-c53e-474e-9fb6-b1bb6d25a748
+createTimestamp: 20110218122731Z
+creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
+
+dn: ou=Roles,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: Roles
+entryUUID: 1b25a840-11b5-45d2-8ce2-8912e3c1e459
+createTimestamp: 20110218122805Z
+creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
+
+dn: uid=ankur,ou=People,dc=example,dc=com
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: top
+userPassword: {SSHA}hiWeH5Qi83oh1Yv47ekyFvc0Kmh9ofrtZfNSHg==
+uid: ankur
+cn: ankur
+sn: banerjee
+entryUUID: 56b65e8a-fa5d-46e3-8b27-2323a1431914
+pwdChangedTime: 20110218144306.343Z
+createTimestamp: 20110218122939Z
+creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
+modifyTimestamp: 20110218144306Z
+modifiersName: cn=Internal Client,cn=Root DNs,cn=config
+
+dn: cn=manager,ou=Roles,dc=example,dc=com
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: manager
+uniqueMember: uid=ankur,ou=People,dc=example,dc=com
+uniqueMember: uid=shantanu,ou=People,dc=example,dc=com
+entryUUID: 65f0ab8c-8b9f-4ded-999f-499e3e6c38a6
+creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
+createTimestamp: 20110218123020Z
+modifyTimestamp: 20110219043338Z
+modifiersName: cn=Directory Manager,cn=Root DNs,cn=config
+
+dn: uid=shantanu,ou=People,dc=example,dc=com
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: top
+givenName: Shantanu
+uid: shantanu
+cn: Shantanu
+sn: Banerjee
+userPassword: {SSHA}MfHAh1LPpGiiiuyXLqvY4/q9iWqMx9KKnmsfNQ==
+entryUUID: fb6e8707-9117-4807-9bd4-fb7ed9391896
+createTimestamp: 20110219043310Z
+creatorsName: cn=Directory Manager,cn=Root DNs,cn=config
+pwdChangedTime: 20110219043310.687Z
+
+dn: cn=Administrators,ou=Roles,dc=example,dc=com
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: Administrators
+uniqueMember: uid=shantanu,ou=People,dc=example,dc=com
+entryUUID: 6bb63a35-7b88-4eb3-9370-56c67713fe8e
+createTimestamp: 20110220134633Z
+creatorsName: cn=Directory Manager,cn=Root DNs,cn=config

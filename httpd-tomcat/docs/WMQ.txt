@@ -1,0 +1,4 @@
+<Resource name="jms/qcf" auth="Container" type="com.ibm.mq.jms.MQQueueConnectionFactory" factory="com.ibm.mq.jms.MQQueueConnectionFactoryFactory" description="JMS Queue Connection Factory for sending messages" HOST="localhost" PORT="1414" CHAN="SYSTEM.DEF.SVRCONN" TRAN="1" QMGR="QM1"/>
+
+<Resource name="jms/queue_sender" auth="Container" type="com.ibm.mq.jms.MQQueue" factory="com.ibm.mq.jms.MQQueueFactory" description="JMS Topic for recieved messages" QU="LQ1" />
+<Resource name="jms/queue_receiver" auth="Container" type="com.ibm.mq.jms.MQQueue" factory="com.ibm.mq.jms.MQQueueFactory" description="JMS Topic for recieved messages" QU="LQ1" />
